@@ -1,11 +1,16 @@
 package org.example;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.HashMap;
+
 // For these exercises, you need to declare a single variable
 // in each function that uses the appropriate collection type
 // (Array, ArrayList, HashSet, HashMap)
 //
 // You do not need to populate this array or add any additional code.
 // If you get stuck, refer to the java basics 4 (arrays and collections) curriculum
+
 public class CollectionChoiceExercises {
     public void MakeColorCollection() {
         // EXAMPLE:
@@ -13,12 +18,23 @@ public class CollectionChoiceExercises {
         // of three strings that are known ahead of time to be "Red", "Green" and "Blue"
         // and will not change during program execution.
 
-        String[] colors;
+        String[] colors = new String[3];
+        colors[0] = "Red";
+        colors[1] = "Green";
+        colors[2] = "Blue";
+        return colors;
     }
 
     public void MakeStudentCollection() {
         // Create an appropriate collection variable for holding a list of student names
         // that will be added to and removed from during program execution.
+ArrayList<String> names = new ArrayList<>();
+names.add("Paris");
+names.add("Sookey");
+names.add("Max");
+names.add("Kristen");
+names.remove("Sookey");
+return names;
     }
 
     public void MakeLoggedInUsersCollection() {
@@ -26,11 +42,25 @@ public class CollectionChoiceExercises {
         // unique logged in usernames where adding a username that's already
         // present is ignored and checking if a user is in the collection can
         // be done very quickly.
+        HashSet<String> usernames = new HashSet();
+        usernames.add("Bluey");
+        usernames.add("Bingo");
+        usernames.add("Muffin");
+        usernames.add("Muffin");
+        usernames.add("Sock");
+        return usernames;
     }
 
     public void MakeEmployeeAccessCodesCollection() {
         // Create an appropriate collection variable for holding a set of
         // key-value pairs where they key is an employee name (String) and the
         // value is an employee access code (String.)
+        HashMap<String, String> accessCodes = new HashMap<>();
+        accessCodes.put("Rory", "E4WJF");
+        accessCodes.put("Emily", "QEJ8E");
+        accessCodes.put("Kirk", "W23NI");
+        accessCodes.put("Doosy", "MI790");
+        return accessCodes;
+
     }
 }
